@@ -1,5 +1,5 @@
 //ARRAY PRODUCTOS//
-const productos = [
+/*const productos = [
     {id:1, nombre: "FERTILIZANTES", precio: 2000, stock:2, img: "imagenes/comboFertilizantes.jpg",},
     {id:2, nombre: "COMBO PLANTAS", precio: 1500, stock:10, img: "imagenes/comboPlantas.jpg",},
     {id:3, nombre: "COMBO SUSTRATOS", precio: 1800, stock:10, img: "imagenes/comboSustratos.jpg",},
@@ -9,16 +9,15 @@ const productos = [
     {id:7, nombre: "PULVERIZADOR", precio: 450, stock:10, img: "imagenes/pulverizador.jpg",},
     {id:8, nombre: "JABON POTASICO", precio: 900, stock:10, img: "imagenes/jabonPotasico.jpg",},
 
-    ]
+    ]*/
 
+function cargarProductos () {
+     fetch('/productos.json')
+     .then(respuesta => respuesta.json())
+     .then(respuesta => console.log(respuesta))
+}
 
-
-    $(document).ready(function () {
-        $("#btnMain").click(function (e) {
-            let hijos = $(e.target).parent().children();
-            console.log(hijos[0].value);
-        });
-    });
+cargarProductos ();
 
 
 	//MOSTRAR PRODUCTOS EN EL INDEX//

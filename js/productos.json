@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nombre": "FERTILIZANTES",
+    "precio": 2000,
+    "stock": 2,
+    "img": "imagenes/comboFertilizantes.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "COMBO PLANTAS",
+    "precio": 1500,
+    "stock": 10,
+    "img": "imagenes/comboPlantas.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "COMBO SUSTRATOS",
+    "precio": 1800,
+    "stock": 10,
+    "img": "imagenes/comboSustratos.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "KIT HERRAMIENTAS JARDIN",
+    "precio": 2500,
+    "stock": 0,
+    "img": "imagenes/herramientasKit.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "COMBO MACETAS",
+    "precio": 500,
+    "stock": 10,
+    "img": "imagenes/macetasKit.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "COMBO SEMILLAS",
+    "precio": 1250,
+    "stock": 10,
+    "img": "imagenes/kitSemillas.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "PULVERIZADOR",
+    "precio": 450,
+    "stock": 10,
+    "img": "imagenes/pulverizador.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "JABON POTASICO",
+    "precio": 900,
+    "stock": 10,
+    "img": "imagenes/jabonPotasico.jpg"
+  }
+]

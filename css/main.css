@@ -9,16 +9,44 @@
   padding: 40px;
   grid-auto-flow: dense; }
 
-.gallery__img {
+.gallery__index{
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 15px;
   flex-wrap: wrap; }
+
+  .gallery__img {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-wrap: wrap; }
+
+  .gallery__item {
+    text-decoration: none;
+    background-color: #f5d8d8;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 80px; }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      grid-auto-rows: minmax(120px, auto);
+      gap: 100px;
+      padding: 40px;
+      grid-auto-flow: dense; }
 
 .gallery__img:hover {
   filter: opacity(0.9);
@@ -34,10 +62,17 @@
 
  #boton-carrito {
   text-decoration: none;
-  background-color: #d8f5de;
+  background-color: #ddf5d8;
   padding: 10px;
   border-radius: 20px;
   float: right;
+ }
+
+ #boton-compra {
+  text-decoration: none;
+  background-color: #ddf5d8;
+  padding: 10px;
+  border-radius: 20px;
  }
 
 .nombres {
@@ -58,11 +93,24 @@
   height: 7%;
   display: block; }
 
+  .Coso {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: center; }
+  
+  .coso-imgcontainer {
+    display: block;
+    text-align: center;
+    width: 250px; }
+
 .coso_imgChiquita {
   width: 200px;
   height: 300px;
   display: block;
-  background-color: #f5d8d8;
+  background-color: #f0d8f5;
   padding: 10px;
   border-radius: 20px;
   margin-top: 30px;
@@ -80,6 +128,12 @@
 img {
   display: block;
   margin: auto; }
+
+  .box-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover; }
 
 
 /*titulos*/
@@ -106,7 +160,7 @@ h3 {
 
 p {
   display: block;
-  color: rgb(99, 97, 97);
+  color: grey;
   font-weight: 300;
   line-height: 1.5;
   text-align: center;
@@ -142,7 +196,62 @@ body {
   margin-left: -15px;
   justify-content: center; }
 
-
+  .container-fluid {
+    display: flex;
+    flex-wrap: inherit;
+    flex-direction: column;
+    align-items: center; }
+  
+  /*carrousel*/
+  .w-100 {
+    width: 95% !important; }
+  
+  /*contenedores section*/
+  .section-container {
+    margin: 0 auto;
+    padding-bottom: 80px; }
+  
+  .section-container-gray-bg {
+    background: #f3eee7; }
+  
+  .section-description {
+    margin-top: 60px;
+    padding-bottom: 10px; }
+  
+  .section-description p {
+    margin-top: 20px;
+    padding: 0 120px; }
+  
+  .section-bottom-button {
+    padding-top: 60px; }
+  
+  /* Section 1 */
+  .section-1-box {
+    padding-top: 30px;
+    text-align: left; }
+  
+  .section-1-box .section-1-box-icon {
+    margin: 0 auto;
+    font-size: 40px;
+    color: #f4f4f4;
+    line-height: 80px;
+    text-align: center; }
+  
+  .section-1-box h3 {
+    margin-top: 0;
+    padding: 0 0 10px 0; }
+  
+  /* Section 2 */
+  .section-2-box {
+    margin-top: 30px;
+    text-align: left; }
+  
+  .section-2-box h3 {
+    margin-top: 0; }
+  
+  .section-2-box-text .medium-paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px; }
 
 
 /* Footer */
@@ -159,20 +268,20 @@ body {
   border-bottom: 1px; }
 
 .footer-links a {
-  color: #020003;
+  color: #000301;
   border: 0; }
 
 .footer-links a:hover, .footer-links a:focus {
-  color: #020003;
+  color: #000301;
   margin-left: 3px; }
 
 .footer-social a {
   margin: 0 10px;
-  color: #020003;
+  color: #000301;
   border: 0; }
 
 .footer-social a:hover, .footer-social a:focus {
-  color: green;
+  color: #3d9658;
   border: 0; }
 
 
@@ -263,7 +372,7 @@ body {
 }
 .boton-eliminar {
   text-decoration: none;
-  background-color: lightgray;
+  background-color: lightgrey;
   padding: 10px;
   border-radius: 20px;
   text-align: center;
@@ -284,7 +393,7 @@ body {
       font-size: 1.8rem;
   }
 }
-.precioPagar{
+.precioTotal{
   font-weight: 700;
 }
 
@@ -324,11 +433,11 @@ body {
 
 
 
-  /*pagina contactanos*/
+  /*pagina pago*/
 form {
-  width: 450px;
+  width: 900px;
   margin: auto;
-  background-color: #d8f5de;
+  background-color: #ddf5d8;
   padding: 10px 20px;
   box-sizing: border-box;
   margin-top: 20px;

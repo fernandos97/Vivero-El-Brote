@@ -12,6 +12,7 @@ const productos = [
     ]
 
 
+
     $(document).ready(function () {
         $("#btnMain").click(function (e) {
             let hijos = $(e.target).parent().children();
@@ -76,15 +77,20 @@ cosoContenedor.on('click', () => {
     cosoContenedor.slideUp(1000)
 })
 
+cosoCarrito.on('click', (event) => {
+    event.stopPropagation()
+
+})
+
 
 //LE CARRITO//
 
 let carrito = []
 
-let carritoJS = JSON.parse(localStorage.getItem('carrito'))
+let carritoLS = JSON.parse(localStorage.getItem('carrito'))
 
-if (carritoJS) {
-    carrito = carritoJS
+if (carritoLS) {
+    carrito = carritoLS
     actualizarCarrito()
 }
 
@@ -101,10 +107,10 @@ function agregarAlCarrito(idProducto) {
         }
     } else if (stock > 0) {
         const {id, precio, nombre} = productos.find(el => el.id === idProducto)
-        carrito.push({id: id, precio: precio,  nombre: nombre, cantidad: 1})
+        carrito.push({id: id, nombre: nombre, precio: precio, cantidad: 1})
     } else {
         Swal.fire('No hay suficiente Stock')
-    }    
+    }
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
 
@@ -120,12 +126,13 @@ function actualizarCarrito() {
     const precioTotal = document.getElementById('precio-total')
     const contadorCarrito = document.getElementById('contador-carrito')
 
+
     contenedorCarrito.innerHTML = ''
 
     carrito.forEach((producto) => {
         contenedorCarrito.innerHTML += `
         <div class="producto-carrito">
-            <p class="nombres">${producto.nombre}</p>
+        <p>${producto.nombre}</p>
             <p>Precio: $${producto.precio * producto.cantidad}</p>
             <p>Cantidad: ${producto.cantidad}</p>
             <button onclick=eliminarProducto(${producto.id}) class="boton-eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -134,11 +141,10 @@ function actualizarCarrito() {
           </svg></button>
         </div>
         `
-  
     })
 
     let ingresarPrecioTotal = carrito.reduce( (acc, el) => acc + (el.precio * el.cantidad), 0 )
-        precioTotal.innerText = ingresarPrecioTotal    
+        precioTotal.innerText = ingresarPrecioTotal
 
     contadorCarrito.innerText = carrito.reduce((acc, el) => acc + el.cantidad, 0 )
     localStorage.setItem('contadorCarrito', JSON.stringify(carrito.length))
@@ -154,7 +160,7 @@ function eliminarProducto(id) {
     if(quitarProducto.cantidad === 0) {
         const indice = carrito.indexOf(quitarProducto)
         carrito.splice(indice, 1)
-    }    
+    }
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
     actualizarCarrito()
@@ -170,15 +176,9 @@ function eliminarTodo() {
 }
 
 
-
-
-
-
-
-
-
-
-
+function irPagar() {
+    Swal.fire('Gracias por su compra!')
+}
 
 
 

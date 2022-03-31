@@ -33,7 +33,7 @@ function muestraProductos(productos) {
   }
 }
 
-//FUNCIONA CARRITO, FUNCIONA//
+//FUNCIONA CARRITO//
 const abrirCarrito = $("#boton-carrito");
 
 const cosoContenedor = $(".coso-contenedor");
@@ -67,7 +67,7 @@ cosoCarrito.on("click", (event) => {
   event.stopPropagation();
 });
 
-//LE CARRITO//
+//CARRITO//
 
 let carrito = [];
 

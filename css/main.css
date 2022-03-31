@@ -471,3 +471,13 @@ textarea {
 @media (max-width: 480px) {
   form {
     width: 100%; } }
+
+
+    .imagenes__nosotros{
+      display: flex;
+    }
+
+    .parrafo__nosotros {
+      display: flex;
+      padding: 75px;
+    }
